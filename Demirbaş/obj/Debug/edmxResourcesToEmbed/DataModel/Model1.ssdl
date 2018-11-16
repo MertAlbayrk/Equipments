@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EquipmentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Equipments.dbo.LoginPanel' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="LoginPanel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="KullanıcıKodu" Type="nvarchar" MaxLength="30" />
+    <Property Name="KullanıcıAdi" Type="nvarchar" MaxLength="150" />
+    <Property Name="Password" Type="nvarchar" MaxLength="20" />
+    <Property Name="Role" Type="nvarchar" MaxLength="30" />
+    <Property Name="PasswordCheck" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_Mobile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="nvarchar" MaxLength="30" />
+    <Property Name="Demirbas" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Number" Type="nvarchar" MaxLength="50" />
+    <Property Name="SerialNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="IMEI" Type="nvarchar" MaxLength="50" />
+    <Property Name="MAC" Type="nvarchar" MaxLength="50" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OldUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="KayıtTarihi" Type="datetime" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_Monitors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="nvarchar" MaxLength="30" />
+    <Property Name="Demirbas" Type="nvarchar" MaxLength="50" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" />
+    <Property Name="Users" Type="nvarchar" MaxLength="50" />
+    <Property Name="BrandFeatures" Type="nvarchar" MaxLength="50" />
+    <Property Name="Place" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OldUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="KayıtTarihi" Type="datetime" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_Notebooks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="nvarchar" MaxLength="30" />
+    <Property Name="Users" Type="nvarchar" MaxLength="50" />
+    <Property Name="Vendor" Type="nvarchar" MaxLength="50" />
+    <Property Name="SerialNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="PcName" Type="nvarchar" MaxLength="50" />
+    <Property Name="WifiMac" Type="nvarchar" MaxLength="50" />
+    <Property Name="EthMac" Type="nvarchar" MaxLength="50" />
+    <Property Name="OperationSystem" Type="nvarchar" MaxLength="50" />
+    <Property Name="Specification" Type="nvarchar" MaxLength="50" />
+    <Property Name="WindowsCdKey" Type="nvarchar" MaxLength="50" />
+    <Property Name="SSD" Type="nvarchar" MaxLength="50" />
+    <Property Name="SSDSerial" Type="nvarchar" MaxLength="50" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OldUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="KayıtTarihi" Type="datetime" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_Others">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="nvarchar" MaxLength="30" />
+    <Property Name="Users" Type="nvarchar" MaxLength="50" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" />
+    <Property Name="SerialNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Features" Type="nvarchar" MaxLength="50" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="Specification" Type="nvarchar" MaxLength="50" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="InvoiceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="OldUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="KayıtTarihi" Type="datetime" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_Printers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="nvarchar" MaxLength="30" />
+    <Property Name="Brand" Type="nvarchar" MaxLength="50" />
+    <Property Name="IP" Type="nvarchar" MaxLength="50" />
+    <Property Name="BasicFeatures" Type="nvarchar" MaxLength="50" />
+    <Property Name="NetworkName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="InventoryNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="InvoiceContract" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="KayıtTarihi" Type="datetime" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SerialNumber" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_Servers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ServerCode" Type="nvarchar" MaxLength="30" />
+    <Property Name="ServerName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SerialNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Location" Type="nvarchar" MaxLength="50" />
+    <Property Name="KayıtTarihi" Type="datetime" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_Software">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="nvarchar" MaxLength="30" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="KayıtTarihi" Type="datetime" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_VINN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="nvarchar" MaxLength="30" />
+    <Property Name="Users" Type="nvarchar" MaxLength="50" />
+    <Property Name="Operator" Type="nvarchar" MaxLength="50" />
+    <Property Name="SerialNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="IMEI" Type="nvarchar" MaxLength="50" />
+    <Property Name="DeviceName" Type="nvarchar" MaxLength="50" />
+    <Property Name="SımCardNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="PIN1" Type="nvarchar" MaxLength="50" />
+    <Property Name="PIN2" Type="nvarchar" MaxLength="50" />
+    <Property Name="PUK1" Type="nvarchar" MaxLength="50" />
+    <Property Name="PUK2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Special" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="OldUser" Type="nvarchar" MaxLength="50" />
+    <Property Name="KayıtTarihi" Type="datetime" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="EquipmentsModelStoreContainer">
+    <EntitySet Name="TB_Mobile" EntityType="Self.TB_Mobile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Monitors" EntityType="Self.TB_Monitors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Notebooks" EntityType="Self.TB_Notebooks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Others" EntityType="Self.TB_Others" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Printers" EntityType="Self.TB_Printers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Servers" EntityType="Self.TB_Servers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Software" EntityType="Self.TB_Software" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_VINN" EntityType="Self.TB_VINN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginPanel" EntityType="Self.LoginPanel" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoginPanel].[KullanıcıKodu] AS [KullanıcıKodu], 
+[LoginPanel].[KullanıcıAdi] AS [KullanıcıAdi], 
+[LoginPanel].[Password] AS [Password], 
+[LoginPanel].[Role] AS [Role], 
+[LoginPanel].[PasswordCheck] AS [PasswordCheck], 
+[LoginPanel].[ID] AS [ID]
+FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

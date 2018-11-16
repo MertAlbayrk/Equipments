@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cd50f59342534e27b895bda72dacb10f" Name="Diagram1">
+        <EntityTypeShape EntityType="EquipmentsModel.TB_Mobile" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EquipmentsModel.TB_Monitors" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EquipmentsModel.TB_Notebooks" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EquipmentsModel.TB_Others" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="EquipmentsModel.TB_Printers" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EquipmentsModel.TB_Servers" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EquipmentsModel.TB_Software" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EquipmentsModel.TB_VINN" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="EquipmentsModel.LoginPanel" Width="1.5" PointX="9.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

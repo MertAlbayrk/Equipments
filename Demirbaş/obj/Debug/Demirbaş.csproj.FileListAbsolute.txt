@@ -1,0 +1,166 @@
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Collections.Immutable.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.IO.FileSystem.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Security.Cryptography.Primitives.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.ValueTuple.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\VBCSCompiler.exe
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\Demirbaş.dll.config
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\Demirbaş.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\Demirbaş.pdb
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\csc.exe
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\csc.exe.config
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\csc.rsp
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\csi.exe
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\csi.exe.config
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\csi.rsp
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\Microsoft.Win32.Primitives.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.AppContext.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Console.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Diagnostics.Process.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.IO.Compression.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.IO.Pipes.AccessControl.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.IO.Pipes.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Security.AccessControl.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Security.Claims.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Security.Cryptography.Encoding.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Security.Principal.Windows.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Text.Encoding.CodePages.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Threading.Thread.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Xml.ReaderWriter.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Xml.XmlDocument.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Xml.XPath.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\System.Xml.XPath.XDocument.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\vbc.exe
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\vbc.exe.config
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\vbc.rsp
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\roslyn\VBCSCompiler.exe.config
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\Antlr3.Runtime.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\Microsoft.Web.Infrastructure.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\Newtonsoft.Json.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\RouteJs.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\RouteJs.Mvc5.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.Helpers.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.Mvc.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.Optimization.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.Razor.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.WebPages.Deployment.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.WebPages.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.WebPages.Razor.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\WebActivatorEx.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\WebGrease.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\WebHelpers.Mvc5.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\Antlr3.Runtime.pdb
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\Newtonsoft.Json.xml
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.Helpers.xml
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.Razor.xml
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.WebPages.xml
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.WebPages.Deployment.xml
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.WebPages.Razor.xml
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.Mvc.xml
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\System.Web.Optimization.xml
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\bin\WebHelpers.Mvc5.xml
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\obj\Debug\Demirbaş.dll
+c:\users\mert.albayrak\documents\visual studio 2015\Projects\Demirbaş\Demirbaş\obj\Debug\Demirbaş.pdb
+C:\Users\mert.albayrak\Documents\Visual Studio 2015\Projects\Demirbaş\Demirbaş\obj\Debug\Demirbaş.csprojResolveAssemblyReference.cache
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.ValueTuple.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\VBCSCompiler.exe
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\Demirbaş.dll.config
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\Demirbaş.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\Demirbaş.pdb
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\csc.exe
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\csc.exe.config
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\csc.rsp
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\csi.exe
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\csi.exe.config
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\csi.rsp
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.AppContext.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Console.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.IO.Compression.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.IO.Pipes.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Security.Claims.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Threading.Thread.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Xml.XPath.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\vbc.exe
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\vbc.exe.config
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\vbc.rsp
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\Antlr3.Runtime.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\EntityFramework.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\Newtonsoft.Json.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\RouteJs.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\RouteJs.Mvc5.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.Helpers.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.Mvc.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.Optimization.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.Razor.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.WebPages.Deployment.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.WebPages.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.WebPages.Razor.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\WebActivatorEx.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\WebGrease.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\WebHelpers.Mvc5.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\EntityFramework.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\Antlr3.Runtime.pdb
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\Newtonsoft.Json.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.Helpers.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.Razor.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.WebPages.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.WebPages.Deployment.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.WebPages.Razor.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.Mvc.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\System.Web.Optimization.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\bin\WebHelpers.Mvc5.xml
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\obj\Debug\Demirbaş.dll
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\obj\Debug\Demirbaş.pdb
+C:\Users\mert.albayrak\Desktop\PGDEMİRBAŞ\Demirbaş\obj\Debug\Demirbaş.csprojResolveAssemblyReference.cache

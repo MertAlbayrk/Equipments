@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EquipmentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EquipmentsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_Mobile" EntityType="EquipmentsModel.TB_Mobile" />
+    <EntitySet Name="TB_Monitors" EntityType="EquipmentsModel.TB_Monitors" />
+    <EntitySet Name="TB_Notebooks" EntityType="EquipmentsModel.TB_Notebooks" />
+    <EntitySet Name="TB_Others" EntityType="EquipmentsModel.TB_Others" />
+    <EntitySet Name="TB_Printers" EntityType="EquipmentsModel.TB_Printers" />
+    <EntitySet Name="TB_Servers" EntityType="EquipmentsModel.TB_Servers" />
+    <EntitySet Name="TB_Software" EntityType="EquipmentsModel.TB_Software" />
+    <EntitySet Name="TB_VINN" EntityType="EquipmentsModel.TB_VINN" />
+    <EntitySet Name="LoginPanel" EntityType="EquipmentsModel.LoginPanel" />
+  </EntityContainer>
+  <EntityType Name="TB_Mobile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Demirbas" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IMEI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MAC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OldUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TB_Monitors">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Demirbas" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Users" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BrandFeatures" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Place" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OldUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TB_Notebooks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Users" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Vendor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PcName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WifiMac" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EthMac" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OperationSystem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Specification" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WindowsCdKey" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SSD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SSDSerial" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OldUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TB_Others">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Users" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Features" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Specification" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <Property Name="InvoiceNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OldUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TB_Printers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BasicFeatures" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NetworkName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InventoryNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceContract" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TB_Servers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ServerCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ServerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TB_Software">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="TB_VINN">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="UserCode" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="Users" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IMEI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DeviceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SımCardNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PIN1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PIN2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PUK1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PUK2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Special" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <Property Name="OldUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="LoginPanel">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="KullanıcıKodu" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="KullanıcıAdi" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Role" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordCheck" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Guid" Nullable="false" />
+  </EntityType>
+</Schema>

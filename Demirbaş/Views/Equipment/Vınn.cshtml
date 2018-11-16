@@ -1,0 +1,589 @@
+﻿
+@{
+    ViewBag.Title = "Vınn";
+}
+
+<script type="text/javascript">
+
+    function Save() {
+        var _data = {
+            Users: $("#txt_Users").val(),
+            Operator: $("#txt_Operator").val(),
+            SerialNumber: $("#txt_SerialNumber").val(),
+            IMEI: $("#txt_IMEI").val(),
+            DeviceName: $("#txt_DeviceName").val(),
+            Special: $("#txt_Special").val(),
+            SımCardNo: $("#txt_SımCardNo").val(),
+            PIN1: $("#txt_PIN1").val(),
+            PIN2: $("#txt_PIN2").val(),
+            PUK1: $("#txt_PUK1").val(),
+            PUK2: $("#txt_PUK2").val(),
+            PurchaseDate: $("#txt_PurchaseDate").val(),
+            Status: $("#txt_Status").val(),
+            OldUser: $("#txt_OldUser").val()
+        };
+
+        $.ajax({
+            url: '@Url.Action("VınnAdd", "Equipment")',
+            type: 'POST',
+            dataType: 'json',
+            data: _data,
+            success: function (response) {
+                if (response.Status == true) {
+                    swal({
+                        title: "",
+                        text: response.Message,
+                        type: "success",
+                        showCancelButton: false,
+                        closeOnConfirm: false,
+                        showLoaderOnConfirm: true,
+                    },
+                     function () {
+                         location.reload();
+                     });
+
+                }
+                else
+                    swal('', response.Message, "error");
+
+            },
+            error: function (hata, ajaxOptions, thrownError) {
+                sweetAlert("Oops...", "Something went wrong!", "error");
+            }
+        });
+
+        Temizle();
+    }
+    function Temizle() {
+        $("#txt_SerialNumber").val('');
+        $("#txt_Users").val('');
+        $("#txt_Operator").val('');
+        $("#txt_IMEI").val('');
+        $("#txt_DeviceName").val('');
+        $("#txt_Special").val('');
+        $("#txt_PIN1").val('');
+        $("#txt_PIN2").val('');
+        $("#txt_PUK1").val('');
+        $("#txt_PUK2").val('');
+        $("#txt_SımCardNo").val('');
+        $("#txt_PurchaseDate").val('');
+        $("#txt_Status").val('');
+        $("#txt_OldUser").val('');
+
+    }
+
+    function VınnSend() {
+
+        $("#mVınnUpdate").modal('show');
+    }
+
+</script>
+<section>
+    <div class="box box-primary">
+        <div class="box-header">
+            <!-- tools box -->
+            <div class="pull-right box-tools">
+                <button class="btn btn-primary btn-sm pull-right" data-widget='collapse' data-toggle="tooltip" title="Collapse" style="margin-right: 5px;"><i class="fa fa-minus"></i></button>
+            </div><!-- /. tools -->
+            <i class="fa fa-user"></i>
+            <h3 class="box-title">
+                Vınn Information
+            </h3>
+        </div>
+        <div class="box-body no-padding">
+            <div id="world-map" style="height: 5px;"></div>
+
+            <div class="form-group row">
+                <div class="col-xs-3">
+                    <label>Users</label>
+                    <input class="form-control" id="txt_Users" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>Operator</label>
+                    <input class="form-control" id="txt_Operator" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>Serial Number</label>
+                    <input class="form-control" id="txt_SerialNumber" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>IMEI</label>
+                    <input class="form-control" id="txt_IMEI" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>DeviceName</label>
+                    <input class="form-control" id="txt_DeviceName" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>Special</label>
+                    <input class="form-control" id="txt_Special" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>SımCardNo</label>
+                    <input class="form-control" id="txt_SımCardNo" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>PIN1</label>
+                    <input class="form-control" id="txt_PIN1" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>PIN2</label>
+                    <input class="form-control" id="txt_PIN2" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>PUK1</label>
+                    <input class="form-control" id="txt_PUK1" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>PUK2</label>
+                    <input class="form-control" id="txt_PUK2" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>Purchase Date</label>
+                    <input class="form-control" id="txt_PurchaseDate" type="date">
+                </div>
+                <div class="col-xs-3">
+                    <label>Status</label>
+                    <input class="form-control" id="txt_Status" type="text">
+                </div>
+                <div class="col-xs-3">
+                    <label>Old User</label>
+                    <input class="form-control" id="txt_OldUser" type="text">
+                </div>
+            </div>
+
+
+        </div><!-- /.box-body-->
+        <div class="box-footer">
+            <button class="btn btn-info" onclick="Save()"><i class="fa fa-save"></i> Bilgileri Kaydet</button>
+            <button class="btn btn-warning" onclick="Temizle()"><i class="fa fa-repeat"></i> Temizle</button>
+        </div>
+    </div>
+
+
+</section>
+<br />
+<section>
+    <div class="box box-danger">
+        <div class="box-header">
+            <div class="box-header">
+                <h3 class="box-title"><i class="fa fa-wheelchair"></i><strong>Vınn Register İnformation</strong></h3>
+                <div style="float:right;">
+                    <select id="pageSize" class="btn btn-xs btn-default" title="Total User Number" style="float:right;">
+                        <option>15</option>
+                        <option>25</option>
+                        <option>50</option>
+                    </select>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="box-body no-padding">
+            <div id="world-map" style="height: 5px;"></div>
+            <div class="box-body table-responsive no-padding" style="overflow-x:scroll;">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>VınnCode</th>
+                            <th>User</th>
+                            <th>Operator</th>
+                            <th>Serial Number</th>
+                            <th>IMEI</th>                           
+                            <th>DeviceName</th>
+                            <th>Special</th>
+                            <th>SımCardNo</th>
+                            <th>PIN1</th>
+                            <th>PIN2</th>
+                            <th>PUK1</th>
+                            <th>PUK2</th>  
+                            <th>PurchaseDate</th>                          
+                            <th>Status</th>
+                            <th>Old User</th>
+                            <th>Update</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in ViewBag.vin)
+                        {
+                            <tr>
+                                <td>@item.UserCode</td>
+                                <td>@item.Users</td>
+                                <td>@item.Operator</td>
+                                <td>@item.IMEI</td>
+                                <td>@item.SerialNumber</td>
+                                <td>@item.DeviceName</td>
+                                <td>@item.SımCardNo</td>
+                                <td>@item.PIN1</td>
+                                <td>@item.PIN2</td>
+                                <td>@item.PUK1</td>
+                                <td>@item.PUK2</td>
+                                <td>@item.Special</td>
+                                <td>@item.Status</td>
+                                <td>@item.PurchaseDate</td>
+                                <td>@item.OldUser</td>
+                                <td> <button type="button" onclick="VınnSend('@item.UserCode''@item.Users''@item.Operator''@item.IMEI''@item.SerialNumber''@item.DeviceName''@item.SımCardNo''@item.PIN1''@item.PIN2''@item.PUK1''@item.PUK2''@item.Special''@item.Status''@item.PurchaseDate''@item.OldUser')" class="btn btn-xs btn-primary"><span class="fa fa-edit"></span> </button></td>
+
+                            </tr>
+
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class="box-footer">
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div id="mVınnUpdate" class="modal fade">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header"><h4>Vınn Information Update</h4><button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></div>
+
+            <div class="modal-body">
+
+                <div class="box box-primary">
+
+                    <div class="box-header"></div>
+
+
+
+                    <ul class="nav nav-tabs">
+
+                        <li class="active"><a data-toggle="tab" href="#Tab1">Vınn Information</a></li>
+
+                        <li><a data-toggle="tab" href="#Tab2">Vınn Detail 1</a></li>
+                        <li><a data-toggle="tab" href="#Tab3">Vınn Detail 2</a></li>
+
+                    </ul>
+
+
+
+                    <div class="tab-content">
+
+
+
+                        <div id="Tab1" class="tab-pane fade in active">
+
+
+
+                            <div class="form-group">
+
+                                <label>VınnCode:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-users"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_VınnCode" readonly>
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+
+                                <label>Users:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-users"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_Users" readonly>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Operator:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-users"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_Operator">
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Serial Number:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-building"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_Serial Number">
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>IMEI:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-building"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_IMEI">
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+
+                                <label>Device Name:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-building"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_Device Name">
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+
+
+                        <div id="Tab2" class="tab-pane fade">
+
+
+
+                            <div class="form-group">
+
+                                <label>Special:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-users"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_Special" readonly>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>SimCard No:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-building"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_SimCard No">
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+
+                                <label>PIN1:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-users"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_PIN1" readonly>
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+
+                                <label>PIN2:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-building"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="PIN2">
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+                        <div id="Tab3" class="tab-pane fade">
+
+                            <div class="form-group">
+
+                                <label>PUK1:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-users"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_PUK1" readonly>
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+
+                                <label>PUK2:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-users"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_PUK2" readonly>
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+
+                                <label>Purchase Date:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-users"></i>
+
+                                    </div>
+
+                                    <input type="date" class="form-control" id="m_Purchase Date" readonly>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Status:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-users"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_Status" readonly>
+
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+
+                                <label>OldUser:</label>
+
+                                <div class="input-group">
+
+                                    <div class="input-group-addon">
+
+                                        <i class="fa fa-users"></i>
+
+                                    </div>
+
+                                    <input type="text" class="form-control" id="m_OldUser" readonly>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+
+                <div class="box-footer">
+
+                    <button class="btn btn-primary" onclick="Update()"><i class="fa fa-pencil"></i>  Update</button>
+
+                    <button class="btn btn-danger" onclick="Pasif()"><i class="fa fa-trash"></i>  Delete</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+

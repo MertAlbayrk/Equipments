@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EquipmentsModelStoreContainer" CdmEntityContainer="EquipmentsEntities">
+    <EntitySetMapping Name="TB_Mobile">
+      <EntityTypeMapping TypeName="EquipmentsModel.TB_Mobile">
+        <MappingFragment StoreEntitySet="TB_Mobile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
+          <ScalarProperty Name="OldUser" ColumnName="OldUser" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="MAC" ColumnName="MAC" />
+          <ScalarProperty Name="IMEI" ColumnName="IMEI" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Demirbas" ColumnName="Demirbas" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Monitors">
+      <EntityTypeMapping TypeName="EquipmentsModel.TB_Monitors">
+        <MappingFragment StoreEntitySet="TB_Monitors">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
+          <ScalarProperty Name="OldUser" ColumnName="OldUser" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Place" ColumnName="Place" />
+          <ScalarProperty Name="BrandFeatures" ColumnName="BrandFeatures" />
+          <ScalarProperty Name="Users" ColumnName="Users" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Demirbas" ColumnName="Demirbas" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Notebooks">
+      <EntityTypeMapping TypeName="EquipmentsModel.TB_Notebooks">
+        <MappingFragment StoreEntitySet="TB_Notebooks">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
+          <ScalarProperty Name="OldUser" ColumnName="OldUser" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="SSDSerial" ColumnName="SSDSerial" />
+          <ScalarProperty Name="SSD" ColumnName="SSD" />
+          <ScalarProperty Name="WindowsCdKey" ColumnName="WindowsCdKey" />
+          <ScalarProperty Name="Specification" ColumnName="Specification" />
+          <ScalarProperty Name="OperationSystem" ColumnName="OperationSystem" />
+          <ScalarProperty Name="EthMac" ColumnName="EthMac" />
+          <ScalarProperty Name="WifiMac" ColumnName="WifiMac" />
+          <ScalarProperty Name="PcName" ColumnName="PcName" />
+          <ScalarProperty Name="SerialNum" ColumnName="SerialNum" />
+          <ScalarProperty Name="Vendor" ColumnName="Vendor" />
+          <ScalarProperty Name="Users" ColumnName="Users" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Others">
+      <EntityTypeMapping TypeName="EquipmentsModel.TB_Others">
+        <MappingFragment StoreEntitySet="TB_Others">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
+          <ScalarProperty Name="OldUser" ColumnName="OldUser" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="Specification" ColumnName="Specification" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="Users" ColumnName="Users" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Printers">
+      <EntityTypeMapping TypeName="EquipmentsModel.TB_Printers">
+        <MappingFragment StoreEntitySet="TB_Printers">
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="InvoiceContract" ColumnName="InvoiceContract" />
+          <ScalarProperty Name="InventoryNumber" ColumnName="InventoryNumber" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="NetworkName" ColumnName="NetworkName" />
+          <ScalarProperty Name="BasicFeatures" ColumnName="BasicFeatures" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Brand" ColumnName="Brand" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Servers">
+      <EntityTypeMapping TypeName="EquipmentsModel.TB_Servers">
+        <MappingFragment StoreEntitySet="TB_Servers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+          <ScalarProperty Name="ServerCode" ColumnName="ServerCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_Software">
+      <EntityTypeMapping TypeName="EquipmentsModel.TB_Software">
+        <MappingFragment StoreEntitySet="TB_Software">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_VINN">
+      <EntityTypeMapping TypeName="EquipmentsModel.TB_VINN">
+        <MappingFragment StoreEntitySet="TB_VINN">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
+          <ScalarProperty Name="OldUser" ColumnName="OldUser" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Special" ColumnName="Special" />
+          <ScalarProperty Name="PUK2" ColumnName="PUK2" />
+          <ScalarProperty Name="PUK1" ColumnName="PUK1" />
+          <ScalarProperty Name="PIN2" ColumnName="PIN2" />
+          <ScalarProperty Name="PIN1" ColumnName="PIN1" />
+          <ScalarProperty Name="SımCardNo" ColumnName="SımCardNo" />
+          <ScalarProperty Name="DeviceName" ColumnName="DeviceName" />
+          <ScalarProperty Name="IMEI" ColumnName="IMEI" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="Operator" ColumnName="Operator" />
+          <ScalarProperty Name="Users" ColumnName="Users" />
+          <ScalarProperty Name="UserCode" ColumnName="UserCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginPanel">
+      <EntityTypeMapping TypeName="EquipmentsModel.LoginPanel">
+        <MappingFragment StoreEntitySet="LoginPanel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PasswordCheck" ColumnName="PasswordCheck" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="KullanıcıAdi" ColumnName="KullanıcıAdi" />
+          <ScalarProperty Name="KullanıcıKodu" ColumnName="KullanıcıKodu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

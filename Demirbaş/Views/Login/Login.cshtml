@@ -1,0 +1,60 @@
+﻿@model Demirbaş.Classes.UserLogin
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WEglobal</title>
+    <link href="~/Content/login.css" rel="stylesheet" />
+    <style type="text/css">
+        .text-danger {
+            font-size: 9pt;
+            color: red;
+            text-align: start;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="form" style="margin: 130px auto;text-align:center;">
+        <div class="img">
+            <img src="~/Content/img/WEglobal.jpg" style="padding:0;height:100%;width:100%;" />
+        </div>
+        <br><br>
+        <div>
+            <section id="loginForm">
+                @using (Html.BeginForm("Login", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal login-form", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(u => u.UserName, new { @type = "text", @class = "form-control", @placeholder = "Kullanıcı Adı" })
+                            @Html.ValidationMessageFor(u => u.UserName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            @Html.PasswordFor(u => u.Password, new { @type = "password", @class = "form-control", @placeholder = "Şifre" })
+                            @Html.ValidationMessageFor(u => u.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <button type="submit">Giriş Yap</button>
+                        </div>
+                    </div>
+                }
+            </section>
+
+        </div>
+    </div>
+</body>
+</html>
