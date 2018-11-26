@@ -11,12 +11,21 @@ namespace Demirbaş.Classes
     {
 
         public ReturnDto PrintersAdd(string Brand, string IP, string BasicFeatures, string SerialNumber, string NetworkName, string Location, string InventoryNumber, string InvoiceContract, string Status, DateTime PurchaseDate)
+        {
+            try
             {
-                try
+                using (EquipmentsEntities data = new EquipmentsEntities())
                 {
-                    using (EquipmentsEntities data = new EquipmentsEntities())
-                    {
+                    var t = data.TB_Printers.Where(p => p.SerialNumber == SerialNumber).Select(p => p.SerialNumber).FirstOrDefault();
 
+
+                    if (SerialNumber == t)
+                    {
+                        return new ReturnDto(false, ReturnDto.SerialError);
+                    }
+
+                    else
+                    {
                         string kod;
                         int max_id = data.TB_Printers.Max(p => p.ID);
                         kod = "Ma-" + max_id;
@@ -34,21 +43,25 @@ namespace Demirbaş.Classes
                         m.InventoryNumber = InventoryNumber;
                         m.InvoiceContract = InvoiceContract;
                         m.Status = Status;
-                        m.PurchaseDate = PurchaseDate;           
+                        m.PurchaseDate = PurchaseDate;
+                        m.KayitDurum = "Active";
                         data.TB_Printers.Add(m);
                         data.SaveChanges();
-
                     }
-                    return new ReturnDto(true, ReturnDto.Success);
-                }
-                catch (Exception)
-                {
 
-                    return new ReturnDto(false, ReturnDto.Failed);
+                    
+
                 }
+                return new ReturnDto(true, ReturnDto.Success);
             }
+            catch (Exception)
+            {
 
-        public ReturnDto PrintersUpdate(string PrintersCode,string Brand, string IP, string BasicFeatures, string SerialNumber, string NetworkName, string Location, string InventoryNumber, string InvoiceContract, string Status, DateTime PurchaseDate)
+                return new ReturnDto(false, ReturnDto.Failed);
+            }
+        }
+
+        public ReturnDto PrintersUpdate(string PrintersCode, string Brand, string IP, string BasicFeatures, string SerialNumber, string NetworkName, string Location, string InventoryNumber, string InvoiceContract, string Status, DateTime PurchaseDate)
         {
             try
 
@@ -84,6 +97,24 @@ namespace Demirbaş.Classes
         }
 
 
+
+        public ReturnDto PrintersDelete(string PrintersCode)
+        {
+            try
+            {
+                using (EquipmentsEntities data = new EquipmentsEntities())
+                {
+                    var m = data.TB_Printers.Where(p => p.UserCode == PrintersCode).FirstOrDefault();
+                    m.KayitDurum = "Inactive";
+                    data.SaveChanges();
+                }
+                return new ReturnDto(true, ReturnDto.Success);
+            }
+            catch (Exception)
+            {
+                return new ReturnDto(false, ReturnDto.Failed);
+            }
+        }
 
 
 

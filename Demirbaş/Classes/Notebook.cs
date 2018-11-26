@@ -9,24 +9,42 @@ namespace Demirbaş.Classes
 {
     public class Notebook
     {
-            public ReturnDto NotebooksAdd(string Users, string Vendor, string SerialNum, string PcName, string WifiMac, string EthMac, string OperationSystem, string Specification, string WindowsCdkey, string SSD, string SSDSerial, DateTime PurchaseDate, string InvoiceNumber, string OldUser)
+        public ReturnDto NotebooksAdd(string Users, string Vendor, string SerialNum, string PcName, string WifiMac, string EthMac, string OperationSystem, string Specification, string WindowsCdkey, string SSD, string SSDSerial, DateTime PurchaseDate, string InvoiceNumber, string OldUser)
+        {
+            try
             {
-                try
+                using (EquipmentsEntities data = new EquipmentsEntities())
                 {
-                    using (EquipmentsEntities data = new EquipmentsEntities())
+
+                    var t = data.TB_Notebooks.Where(p => p.SerialNum == SerialNum).Select(p => p.SerialNum).FirstOrDefault();
+                    var t1 = data.TB_Notebooks.Where(p => p.EthMac == EthMac).Select(p => p.EthMac).FirstOrDefault();
+                    var t2 = data.TB_Notebooks.Where(p => p.WifiMac == WifiMac).Select(p => p.WifiMac).FirstOrDefault();
+
+                    if (SerialNum == t )
                     {
+                        return new ReturnDto(false, ReturnDto.SerialError);
+                    }
+                    if (WifiMac == t2)
+                    {
+                        return new ReturnDto(false, ReturnDto.WifiErro);
 
-                        string kod;
-                        int max_id = data.TB_Notebooks.Max(p => p.ID);
-                        kod = "Mv-" + max_id;
+                    }
+                    if (EthMac == t1)
+                    {
+                        return new ReturnDto(false, ReturnDto.EthMac);
+                    }
+
+                    string kod;
+                    int max_id = data.TB_Notebooks.Max(p => p.ID);
+                    kod = "Mv-" + max_id;
 
 
 
-                        TB_Notebooks m = new TB_Notebooks();
+                    TB_Notebooks m = new TB_Notebooks();
                     m.EthMac = EthMac;
                     m.InvoiceNumber = InvoiceNumber;
                     m.KayıtTarihi = DateTime.Now;
-                    m.OldUser =OldUser;
+                    m.OldUser = OldUser;
                     m.OperationSystem = OperationSystem;
                     m.PcName = PcName;
                     m.PurchaseDate = PurchaseDate;
@@ -38,20 +56,22 @@ namespace Demirbaş.Classes
                     m.Users = Users;
                     m.Vendor = Vendor;
                     m.WifiMac = WifiMac;
+                    m.KayitDurum = "Active";
                     m.WindowsCdKey = WindowsCdkey;
                     data.TB_Notebooks.Add(m);
                     data.SaveChanges();
-                    }
-                    return new ReturnDto(true, ReturnDto.Success);
-                }
-                catch (Exception)
-                {
 
-                    return new ReturnDto(false, ReturnDto.Failed);
                 }
+                return new ReturnDto(true, ReturnDto.Success);
             }
+            catch (Exception)
+            {
 
-        public ReturnDto NotebooksUpdate(string NotebooksCode,string Users, string Vendor, string SerialNum, string PcName, string WifiMac, string EthMac, string OperationSystem, string Specification, string WindowsCdkey, string SSD, string SSDSerial, DateTime PurchaseDate, string InvoiceNumber, string OldUser)
+                return new ReturnDto(false, ReturnDto.Failed);
+            }
+        }
+
+        public ReturnDto NotebooksUpdate(string NotebooksCode, string Users, string Vendor, string SerialNum, string PcName, string WifiMac, string EthMac, string OperationSystem, string Specification, string WindowsCdkey, string SSD, string SSDSerial, DateTime PurchaseDate, string InvoiceNumber, string OldUser)
         {
             try
 
@@ -89,7 +109,23 @@ namespace Demirbaş.Classes
 
         }
 
-
+        public ReturnDto NotebooksDelete(string NotebooksCode)
+        {
+            try
+            {
+                using (EquipmentsEntities data = new EquipmentsEntities())
+                {
+                    var m = data.TB_Notebooks.Where(p => p.UserCode == NotebooksCode).FirstOrDefault();
+                    m.KayitDurum = "Inactive";
+                    data.SaveChanges();
+                }
+                return new ReturnDto(true, ReturnDto.Success);
+            }
+            catch (Exception)
+            {
+                return new ReturnDto(false, ReturnDto.Failed);
+            }
+        }
 
 
 

@@ -9,11 +9,18 @@ namespace Demirbaş.Classes
     public class Vınn
     {
 
-            public ReturnDto VınnAdd(string Users, string Operator,string SerialNumber, string IMEI, string DeviceName, string SımCardNo, string PIN1, string PIN2, string PUK1, string PUK2, string Special, string Status, DateTime PurchaseDate, string Olduser)
+        public ReturnDto VınnAdd(string Users, string Operator, string IMEI, string SerialNumber,string DeviceName, string SımCardNo, string PIN1, string PIN2, string PUK1, string PUK2, string Special, string Status, DateTime PurchaseDate, string Olduser)
+        {
+            try
             {
-                try
+                using (EquipmentsEntities data = new EquipmentsEntities())
                 {
-                    using (EquipmentsEntities data = new EquipmentsEntities())
+                    var t = data.TB_VINN.Where(p => p.SerialNumber == SerialNumber).Select(p => p.SerialNumber).FirstOrDefault();
+                    if (SerialNumber == t)
+                    {
+                        return new ReturnDto(false, ReturnDto.SerialError);
+                    }
+                    else
                     {
 
                         string kod;
@@ -35,23 +42,25 @@ namespace Demirbaş.Classes
                         m.PUK1 = PUK1;
                         m.PUK2 = PUK2;
                         m.Special = Special;
-                        m.Status =Status;
+                        m.Status = Status;
                         m.PurchaseDate = PurchaseDate;
                         m.OldUser = Olduser;
+                        m.KayitDurum = "Active";
                         data.TB_VINN.Add(m);
                         data.SaveChanges();
-
                     }
+
                     return new ReturnDto(true, ReturnDto.Success);
                 }
-                catch (Exception)
-                {
-
-                    return new ReturnDto(false, ReturnDto.Failed);
-                }
             }
+            catch (Exception)
+            {
 
-        public ReturnDto VınnUpdate(string VınnCode,string Users, string Operator, string SerialNumber, string IMEI, string DeviceName, string SımCardNo, string PIN1, string PIN2, string PUK1, string PUK2, string Special, string Status, DateTime PurchaseDate, string Olduser)
+                return new ReturnDto(false, ReturnDto.Failed);
+            }
+        }
+
+        public ReturnDto VınnUpdate(string VınnCode, string Users, string Operator, string SerialNumber, string IMEI, string DeviceName, string SımCardNo, string PIN1, string PIN2, string PUK1, string PUK2, string Special, string Status, DateTime PurchaseDate, string Olduser)
 
         {
             try
@@ -91,6 +100,25 @@ namespace Demirbaş.Classes
         }
 
 
+
+
+        public ReturnDto VınnDelete(string VınnCode)
+        {
+            try
+            {
+                using (EquipmentsEntities data = new EquipmentsEntities())
+                {
+                    var m = data.TB_VINN.Where(p => p.UserCode == VınnCode).FirstOrDefault();
+                    m.KayitDurum = "Inactive";
+                    data.SaveChanges();
+                }
+                return new ReturnDto(true, ReturnDto.Success);
+            }
+            catch (Exception)
+            {
+                return new ReturnDto(false, ReturnDto.Failed);
+            }
+        }
 
 
 

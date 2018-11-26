@@ -1,0 +1,55 @@
+﻿@model Demirbaş.ViewModel.PrinterModel
+@{
+    Layout = null;
+}
+@using PagedList;
+@using PagedList.Mvc;
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>PrinterCode</th>
+            <th>Serial Number</th>
+            <th>Brand</th>
+            <th>IP</th>
+            <th>Basic Features</th>
+            <th>Network Name</th>
+            <th>Location</th>
+            <th>Inventory Number</th>
+            <th>Invoice Contract</th>
+            <th>Status</th>
+            <th>Purchase Date</th>
+         
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PrinterSearch)
+        {
+            <tr>
+                <td>@item.UserCode</td>
+                <td>@item.SerialNumber</td>
+                <td>@item.Brand</td>
+                <td>@item.IP</td>
+                <td>@item.BasicFeatures</td>
+                <td>@item.NetworkName</td>
+                <td>@item.Location</td>
+                <td>@item.InventoryNumber</td>
+                <td>@item.InvoiceContract</td>
+                <td>@item.Status</td>
+                <td>@item.PurchaseDate</td>
+
+             
+
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+@Html.PagedListPager(Model.PrinterSearch, page => Url.Action("Printers", new RouteValueDictionary
+{
+    {"Page",page },
+    {"SerialNumber",Model.SerialNumber }
+}), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions { UpdateTargetId = "ajax-main" }))

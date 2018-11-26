@@ -1,0 +1,61 @@
+﻿@model Demirbaş.ViewModel.VinModel
+@{
+    Layout = null;
+}
+@using PagedList;
+@using PagedList.Mvc;
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>VınnCode</th>
+            <th>User</th>
+            <th>Operator</th>
+            <th>IMEI</th>
+            <th>Serial Number</th>
+            <th>DeviceName</th>
+            <th>SımCardNo</th>
+            <th>PIN1</th>
+            <th>PIN2</th>
+            <th>PUK1</th>
+            <th>PUK2</th>
+            <th>Special</th>
+            <th>Status</th>
+            <th>Old User</th>
+            <th>PurchaseDate</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.VinSearch)
+        {
+            <tr>
+                <td>@item.UserCode</td>
+                <td>@item.Users</td>
+                <td>@item.Operator</td>
+                <td>@item.IMEI</td>
+                <td>@item.SerialNumber</td>
+                <td>@item.DeviceName</td>
+                <td>@item.SımCardNo</td>
+                <td>@item.PIN1</td>
+                <td>@item.PIN2</td>
+                <td>@item.PUK1</td>
+                <td>@item.PUK2</td>
+                <td>@item.Special</td>
+                <td>@item.Status</td>
+                <td>@item.OldUser</td>
+                <td>@item.PurchaseDate</td>
+                
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+@Html.PagedListPager(Model.VinSearch, page => Url.Action("Vınn", new RouteValueDictionary
+{
+    {"Page",page },
+    {"Users",Model.Users },
+    {"SerialNumber",Model.SerialNumber },
+}), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions { UpdateTargetId = "ajax-main" }))

@@ -7,7 +7,7 @@ namespace Demirbaş.Classes
 {
     public class ReturnDto
     {
-        public const string Success = "İşlem Başarılı", Failed = "İşlem Başarısız";
+        public const string Success = "Process Succesfull", Failed = "Process Unsuccesfull", SerialError= "Changed Serial Number", WifiErro ="Changed WifiMac Number", EthMac="Changed Ethernet Mac";
 
         public bool Status { get; set; }
         public object ReturnObject { get; set; }

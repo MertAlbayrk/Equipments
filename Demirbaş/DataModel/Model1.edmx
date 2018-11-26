@@ -18,6 +18,16 @@ warning 6002: The table/view 'Equipments.dbo.LoginPanel' does not have a primary
           <Property Name="PasswordCheck" Type="nvarchar" MaxLength="50" />
           <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="TB_Mobile">
           <Key>
             <PropertyRef Name="ID" />
@@ -35,6 +45,7 @@ warning 6002: The table/view 'Equipments.dbo.LoginPanel' does not have a primary
           <Property Name="OldUser" Type="nvarchar" MaxLength="50" />
           <Property Name="KayıtTarihi" Type="datetime" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KayitDurumu" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="TB_Monitors">
           <Key>
@@ -52,6 +63,8 @@ warning 6002: The table/view 'Equipments.dbo.LoginPanel' does not have a primary
           <Property Name="OldUser" Type="nvarchar" MaxLength="50" />
           <Property Name="KayıtTarihi" Type="datetime" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KayitDurum" Type="nvarchar" MaxLength="10" />
+          <Property Name="SerialNumber" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TB_Notebooks">
           <Key>
@@ -74,6 +87,7 @@ warning 6002: The table/view 'Equipments.dbo.LoginPanel' does not have a primary
           <Property Name="OldUser" Type="nvarchar" MaxLength="50" />
           <Property Name="KayıtTarihi" Type="datetime" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KayitDurum" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="TB_Others">
           <Key>
@@ -91,6 +105,7 @@ warning 6002: The table/view 'Equipments.dbo.LoginPanel' does not have a primary
           <Property Name="OldUser" Type="nvarchar" MaxLength="50" />
           <Property Name="KayıtTarihi" Type="datetime" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KayitDurum" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="TB_Printers">
           <Key>
@@ -109,6 +124,7 @@ warning 6002: The table/view 'Equipments.dbo.LoginPanel' does not have a primary
           <Property Name="KayıtTarihi" Type="datetime" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="SerialNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="KayitDurum" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="TB_Servers">
           <Key>
@@ -120,6 +136,7 @@ warning 6002: The table/view 'Equipments.dbo.LoginPanel' does not have a primary
           <Property Name="Location" Type="nvarchar" MaxLength="50" />
           <Property Name="KayıtTarihi" Type="datetime" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KayitDurum" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="TB_Software">
           <Key>
@@ -131,6 +148,7 @@ warning 6002: The table/view 'Equipments.dbo.LoginPanel' does not have a primary
           <Property Name="PurchaseDate" Type="datetime" />
           <Property Name="KayıtTarihi" Type="datetime" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KayitDurum" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="TB_VINN">
           <Key>
@@ -153,8 +171,10 @@ warning 6002: The table/view 'Equipments.dbo.LoginPanel' does not have a primary
           <Property Name="OldUser" Type="nvarchar" MaxLength="50" />
           <Property Name="KayıtTarihi" Type="datetime" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KayitDurum" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityContainer Name="EquipmentsModelStoreContainer">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Mobile" EntityType="Self.TB_Mobile" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Monitors" EntityType="Self.TB_Monitors" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_Notebooks" EntityType="Self.TB_Notebooks" Schema="dbo" store:Type="Tables" />
@@ -179,6 +199,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
     <edmx:ConceptualModels>
       <Schema Namespace="EquipmentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="EquipmentsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="EquipmentsModel.sysdiagrams" />
           <EntitySet Name="TB_Mobile" EntityType="EquipmentsModel.TB_Mobile" />
           <EntitySet Name="TB_Monitors" EntityType="EquipmentsModel.TB_Monitors" />
           <EntitySet Name="TB_Notebooks" EntityType="EquipmentsModel.TB_Notebooks" />
@@ -189,6 +210,16 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <EntitySet Name="TB_VINN" EntityType="EquipmentsModel.TB_VINN" />
           <EntitySet Name="LoginPanel" EntityType="EquipmentsModel.LoginPanel" />
         </EntityContainer>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="TB_Mobile">
           <Key>
             <PropertyRef Name="ID" />
@@ -206,6 +237,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <Property Name="OldUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KayitDurumu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TB_Monitors">
           <Key>
@@ -223,6 +255,8 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <Property Name="OldUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KayitDurum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TB_Notebooks">
           <Key>
@@ -245,6 +279,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <Property Name="OldUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KayitDurum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TB_Others">
           <Key>
@@ -262,6 +297,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <Property Name="OldUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KayitDurum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TB_Printers">
           <Key>
@@ -280,6 +316,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="SerialNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KayitDurum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TB_Servers">
           <Key>
@@ -291,6 +328,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KayitDurum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TB_Software">
           <Key>
@@ -302,6 +340,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
           <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KayitDurum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="TB_VINN">
           <Key>
@@ -324,6 +363,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <Property Name="OldUser" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="KayıtTarihi" Type="DateTime" Precision="3" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KayitDurum" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="LoginPanel">
           <Key>
@@ -342,9 +382,21 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="EquipmentsModelStoreContainer" CdmEntityContainer="EquipmentsEntities">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="EquipmentsModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TB_Mobile">
             <EntityTypeMapping TypeName="EquipmentsModel.TB_Mobile">
               <MappingFragment StoreEntitySet="TB_Mobile">
+                <ScalarProperty Name="KayitDurumu" ColumnName="KayitDurumu" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
                 <ScalarProperty Name="OldUser" ColumnName="OldUser" />
@@ -364,6 +416,8 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <EntitySetMapping Name="TB_Monitors">
             <EntityTypeMapping TypeName="EquipmentsModel.TB_Monitors">
               <MappingFragment StoreEntitySet="TB_Monitors">
+                <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+                <ScalarProperty Name="KayitDurum" ColumnName="KayitDurum" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
                 <ScalarProperty Name="OldUser" ColumnName="OldUser" />
@@ -382,6 +436,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <EntitySetMapping Name="TB_Notebooks">
             <EntityTypeMapping TypeName="EquipmentsModel.TB_Notebooks">
               <MappingFragment StoreEntitySet="TB_Notebooks">
+                <ScalarProperty Name="KayitDurum" ColumnName="KayitDurum" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
                 <ScalarProperty Name="OldUser" ColumnName="OldUser" />
@@ -405,6 +460,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <EntitySetMapping Name="TB_Others">
             <EntityTypeMapping TypeName="EquipmentsModel.TB_Others">
               <MappingFragment StoreEntitySet="TB_Others">
+                <ScalarProperty Name="KayitDurum" ColumnName="KayitDurum" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
                 <ScalarProperty Name="OldUser" ColumnName="OldUser" />
@@ -423,6 +479,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <EntitySetMapping Name="TB_Printers">
             <EntityTypeMapping TypeName="EquipmentsModel.TB_Printers">
               <MappingFragment StoreEntitySet="TB_Printers">
+                <ScalarProperty Name="KayitDurum" ColumnName="KayitDurum" />
                 <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
@@ -442,6 +499,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <EntitySetMapping Name="TB_Servers">
             <EntityTypeMapping TypeName="EquipmentsModel.TB_Servers">
               <MappingFragment StoreEntitySet="TB_Servers">
+                <ScalarProperty Name="KayitDurum" ColumnName="KayitDurum" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
                 <ScalarProperty Name="Location" ColumnName="Location" />
@@ -454,6 +512,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <EntitySetMapping Name="TB_Software">
             <EntityTypeMapping TypeName="EquipmentsModel.TB_Software">
               <MappingFragment StoreEntitySet="TB_Software">
+                <ScalarProperty Name="KayitDurum" ColumnName="KayitDurum" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
                 <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
@@ -466,6 +525,7 @@ FROM [dbo].[LoginPanel] AS [LoginPanel]</DefiningQuery>
           <EntitySetMapping Name="TB_VINN">
             <EntityTypeMapping TypeName="EquipmentsModel.TB_VINN">
               <MappingFragment StoreEntitySet="TB_VINN">
+                <ScalarProperty Name="KayitDurum" ColumnName="KayitDurum" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="KayıtTarihi" ColumnName="KayıtTarihi" />
                 <ScalarProperty Name="OldUser" ColumnName="OldUser" />

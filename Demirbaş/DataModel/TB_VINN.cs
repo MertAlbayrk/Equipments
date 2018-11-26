@@ -31,5 +31,6 @@ namespace Demirbaş.DataModel
         public string OldUser { get; set; }
         public Nullable<System.DateTime> KayıtTarihi { get; set; }
         public int ID { get; set; }
+        public string KayitDurum { get; set; }
     }
 }

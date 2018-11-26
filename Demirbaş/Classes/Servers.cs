@@ -10,13 +10,19 @@ namespace Demirbaş.Classes
     public class Servers
     {
 
-            public ReturnDto ServersAdd(string ServerName, string Location,string SerialNumber)
+        public ReturnDto ServersAdd(string ServerName, string Location, string SerialNumber)
+        {
+            try
             {
-                try
+                using (EquipmentsEntities data = new EquipmentsEntities())
                 {
-                    using (EquipmentsEntities data = new EquipmentsEntities())
+                    var t = data.TB_Servers.Where(p => p.SerialNumber == SerialNumber).Select(p => p.SerialNumber).FirstOrDefault();
+                    if (SerialNumber == t)
                     {
-
+                        return new ReturnDto(false, ReturnDto.SerialError);
+                    }
+                    else
+                    {
                         string kod;
                         int max_id = data.TB_Servers.Max(p => p.ID);
                         kod = "Ms-" + max_id;
@@ -28,20 +34,23 @@ namespace Demirbaş.Classes
                         m.ServerName = ServerName;
                         m.SerialNumber = SerialNumber;
                         m.Location = Location;
+                        m.KayitDurum = "Active";
                         data.TB_Servers.Add(m);
                         data.SaveChanges();
 
                     }
-                    return new ReturnDto(true, ReturnDto.Success);
-                }
-                catch (Exception)
-                {
 
-                    return new ReturnDto(false, ReturnDto.Failed);
                 }
+                return new ReturnDto(true, ReturnDto.Success);
             }
+            catch (Exception)
+            {
 
-        public ReturnDto ServersUpdate(string ServersCode,string ServerName, string Location, string SerialNumber)
+                return new ReturnDto(false, ReturnDto.Failed);
+            }
+        }
+
+        public ReturnDto ServersUpdate(string ServersCode, string ServerName, string Location, string SerialNumber)
 
         {
             try
@@ -70,7 +79,23 @@ namespace Demirbaş.Classes
 
         }
 
-
+        public ReturnDto ServersDelete(string ServerCode)
+        {
+            try
+            {
+                using (EquipmentsEntities data = new EquipmentsEntities())
+                {
+                    var m = data.TB_Servers.Where(p => p.ServerCode == ServerCode).FirstOrDefault();
+                    m.KayitDurum = "Inactive";
+                    data.SaveChanges();
+                }
+                return new ReturnDto(true, ReturnDto.Success);
+            }
+            catch (Exception)
+            {
+                return new ReturnDto(false, ReturnDto.Failed);
+            }
+        }
 
 
 

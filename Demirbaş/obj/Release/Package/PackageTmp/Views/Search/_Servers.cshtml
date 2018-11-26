@@ -1,0 +1,42 @@
+﻿@model Demirbaş.ViewModel.ServersModel
+@{
+    Layout = null;
+}
+@using PagedList;
+@using PagedList.Mvc;
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Server Code</th>
+            <th>Server Name</th>
+            <th>Serial Number</th>
+            <th>Location</th>
+        
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ServersSearch)
+        {
+            <tr>
+                <td>@item.UserCode</td>
+                <td>@item.ServerName</td>
+                <td>@item.Serialnumber</td>
+                <td>@item.Location</td>
+              
+
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+
+
+@Html.PagedListPager(Model.ServersSearch, page => Url.Action("Servers", new RouteValueDictionary
+{
+    {"Page",page },
+    {"SerialNumber",Model.SerialNumber }
+}), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions { UpdateTargetId = "ajax-main" }))

@@ -1,0 +1,55 @@
+﻿@model Demirbaş.ViewModel.MonitorModel
+@{
+    Layout = null;
+}
+@using PagedList;
+@using PagedList.Mvc;
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>MonitorCode</th>
+            <th>Demirbas</th>
+            <th>Brand</th>
+            <th>Users</th>
+            <th>SerialNumber</th>
+            <th>BrandFeatures</th>
+            <th>Place</th>
+            <th>Status</th>
+            <th>PurchaseDate</th>
+            <th>InvoiceNumber</th>
+            <th>OldUser</th>
+  
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.MonitorSearch)
+        {
+            <tr>
+                <td>@item.UserCode</td>
+                <td>@item.Demirbas</td>
+                <td>@item.Brand</td>
+                <td>@item.Users</td>
+                <td>@item.SerialNumber</td>
+                <td>@item.BasicFeatures</td>
+                <td>@item.Place</td>
+                <td>@item.Status</td>
+                <td>@item.PurchaseDate</td>
+                <td>@item.InvoiceNumber</td>
+                <td>@item.OldUser</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+@Html.PagedListPager(Model.MonitorSearch, page => Url.Action("Monitors", new RouteValueDictionary
+{
+    {"Page",page },
+    {"Users",Model.Users },
+    {"SerialNumber",Model.SerialNumber },
+}), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions { UpdateTargetId = "ajax-main" }))

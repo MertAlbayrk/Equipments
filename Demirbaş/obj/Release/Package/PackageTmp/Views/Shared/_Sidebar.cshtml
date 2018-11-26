@@ -1,0 +1,95 @@
+﻿@using WebHelpers.Mvc5
+<aside class="main-sidebar">
+    <section class="sidebar">
+
+        <br />
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="treeview">
+                <a href="@Url.Action("Index", "Home")">
+
+                    <i class="fa fa-dashboard"></i> <span>DASHBOARD</span>
+                    <span class="pull-right-container">
+                      
+                        
+                    </span>
+                </a>
+             
+            </li>
+
+
+            <li class="treeview">
+                <a href="#">
+                    
+                    <i class="fa fa-line-chart"></i> <span>EQUIPMENTS</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="@Url.Action("Notebooks","Equipment")"><b>Notebook </b></a></li>
+                    <li><a href="@Url.Action("Servers","Equipment")"><b>Servers</b></a></li>
+                    <li><a href="@Url.Action("Printers","Equipment")"><b>Printers</b></a></li>
+                    <li><a href="@Url.Action("Monitors","Equipment")"><b>Monitors</b></a></li>
+                    <li><a href="@Url.Action("Vınn","Equipment")"><b>Vınn</b></a></li>
+                    <li><a href="@Url.Action("Mobile","Equipment")"><b>Mobile</b></a></li>
+                    <li><a href="@Url.Action("Others","Equipment")"><b>Others</b></a></li>
+                    <li><a href="@Url.Action("Software","Equipment")"><b>Software</b></a></li>
+                   
+                   
+                </ul>
+
+            </li>
+
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-search"></i> <span>SEARCH</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="@Url.Action("Notebooks","Search")"><b>Notebook Search</b></a></li>
+                    <li><a href="@Url.Action("Servers","Search")"><b>Servers Search</b></a></li>
+                    <li><a href="@Url.Action("Printers","Search")"><b>Printers Search</b></a></li>
+                    <li><a href="@Url.Action("Monitors","Search")"><b>Monitors Search</b></a></li>
+                    <li><a href="@Url.Action("Vınn","Search")"><b>Vınn Search</b></a></li>
+                    <li><a href="@Url.Action("Mobile","Search")"><b>Mobile Search</b></a></li>
+                    <li><a href="@Url.Action("Others","Search")"><b>Others Search</b></a></li>
+                    <li><a href="@Url.Action("Software","Search")"><b>Software Search</b></a></li>
+
+                </ul>
+
+
+            </li>
+            <li class="treeview">
+                <a href="#">
+
+                    <i class="fa fa-hourglass-1"></i> <span>Reports</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+            
+
+            </li>
+            <li class="treeview">
+                <a href="@Url.Action("Index", "Home")">
+
+                    <i class="fa fa-sign-out"></i> <span>LOGOUT</span>
+                    <span class="pull-right-container">
+
+
+                    </span>
+                </a>
+
+            </li>
+
+        </ul>
+
+
+
+
+        @* END Menu *@
+    </section>
+</aside>

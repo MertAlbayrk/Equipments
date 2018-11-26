@@ -1,0 +1,63 @@
+﻿@model Demirbaş.ViewModel.NotebookModel
+@{
+    Layout = null;
+}
+@using PagedList;
+@using PagedList.Mvc;
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>NotebookCode</th>
+            <th>Users</th>
+            <th>Vendor</th>
+            <th>Serial Number</th>
+            <th>PCName</th>
+            <th>Wifi Mac</th>
+            <th>Eth Mac</th>
+            <th>Specifications</th>
+            <th>Windows CDkey</th>
+            <th>SSD</th>
+            <th>SSD Serial</th>
+            <th>Purchase Date</th>
+            <th>Invoice Number</th>
+            <th>Old User</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.NotebookSearch)
+        {
+            <tr>
+                <td>@item.UserCode</td>
+                <td>@item.Users</td>
+                <td>@item.Vendor</td>
+                <td>@item.SerialNum</td>
+                <td>@item.PcName</td>
+                <td>@item.WifiMac</td>
+                <td>@item.EthMac</td>
+                <td>@item.Specification</td>
+                <td>@item.WindowsCdKey</td>
+                <td>@item.SSD</td>
+                <td>@item.SSDSerial</td>
+                <td>@item.PurchaseDate</td>
+                <td>@item.InvoiceNumber</td>
+                <td>@item.OldUser</td>
+                
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+
+
+
+
+@Html.PagedListPager(Model.NotebookSearch, page => Url.Action("Notebooks", new RouteValueDictionary
+{
+    {"Page",page },
+    {"Users",Model.Users },
+    {"SerialNumber",Model.SerialNumber },
+}), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions { UpdateTargetId = "ajax-main" }))

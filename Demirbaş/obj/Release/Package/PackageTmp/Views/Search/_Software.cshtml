@@ -1,0 +1,44 @@
+﻿@model Demirbaş.ViewModel.SoftwareModel
+@{
+    Layout = null;
+}
+@using PagedList;
+@using PagedList.Mvc;
+
+
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>SoftwareCode</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>PurchaseDate</th>
+        
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.softwareSearch)
+        {
+            <tr>
+                <td>@item.UserCode</td>
+                <td>@item.Name</td>
+                <td>@item.Status</td>
+                <td>@item.PurchaseteDate</td>
+                
+
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+
+
+@Html.PagedListPager(Model.softwareSearch, page => Url.Action("Software", new RouteValueDictionary
+{
+    {"Page",page },
+    {"Users",Model.Name }
+}), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions { UpdateTargetId = "ajax-main" }))

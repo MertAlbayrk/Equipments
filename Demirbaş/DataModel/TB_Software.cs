@@ -20,5 +20,6 @@ namespace Demirbaş.DataModel
         public Nullable<System.DateTime> PurchaseDate { get; set; }
         public Nullable<System.DateTime> KayıtTarihi { get; set; }
         public int ID { get; set; }
+        public string KayitDurum { get; set; }
     }
 }

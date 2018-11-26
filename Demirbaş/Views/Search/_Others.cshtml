@@ -1,0 +1,54 @@
+﻿@model Demirbaş.ViewModel.OtherModel
+@{
+    Layout = null;
+}
+@using PagedList;
+@using PagedList.Mvc;
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>OtherCode</th>
+            <th>Users</th>
+            <th>Brand</th>
+            <th>Serial Number</th>
+            <th>Features</th>
+            <th>Location</th>
+            <th>Specification</th>
+            <th>Invoice Number</th>
+            <th>Purchase Date</th>
+            <th>Old User</th>
+        
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OtherSearch)
+        {
+            <tr>
+                <td>@item.UserCode</td>
+                <td>@item.Users</td>
+                <td>@item.Brand</td>
+                <td>@item.SerialNumber</td>
+                <td>@item.Features</td>
+                <td>@item.Location</td>
+                <td>@item.Specification</td>
+                <td>@item.InvoiceNumber</td>
+                <td>@item.PurchaseDate</td>
+                <td>@item.OldUser</td>
+                
+
+
+
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+@Html.PagedListPager(Model.OtherSearch, page => Url.Action("Others", new RouteValueDictionary
+{
+    {"Page",page },
+    {"Users",Model.Users },
+    {"SerialNumber",Model.SerialNumber },
+}), PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions { UpdateTargetId = "ajax-main" }))

@@ -1,0 +1,48 @@
+﻿@model Demirbaş.ViewModel.MobileModel
+
+@using PagedList;
+@using PagedList.Mvc;
+<table class="table table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>MobileCode</th>
+            <th>Demirbas</th>
+            <th>Mac</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Number</th>
+            <th>SerialNumber</th>
+            <th>IMEI</th>
+            <th>Invoice No</th>
+            <th>Old User</th>
+            <th>PurchaseDate</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.MobileSearch)
+        {
+            <tr>
+                <td>@item.UserCode</td>
+                <td>@item.Demirbas</td>
+                <td>@item.MAC</td>
+                <td>@item.Name</td>
+                <td>@item.Phone</td>
+                <td>@item.Number</td>
+                <td>@item.SerialNumber</td>
+                <td>@item.IMEI</td>
+                <td>@item.InvoiceNumber</td>
+                <td>@item.OldUser</td>
+                <td>@item.PurchaseDate</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+@Html.PagedListPager(Model.MobileSearch, page => Url.Action("Mobile",new RouteValueDictionary
+{
+    {"Page",page },
+    {"Users",Model.Users },
+    {"SerialNumber",Model.SerialNumber },
+}),PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions { UpdateTargetId ="ajax-main"}))

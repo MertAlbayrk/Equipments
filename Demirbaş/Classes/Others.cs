@@ -14,7 +14,16 @@ namespace Demirbaş.Classes
                 {
                     using (EquipmentsEntities data = new EquipmentsEntities())
                     {
+                    var t = data.TB_Others.Where(p => p.SerialNumber == SerialNumber).Select(p => p.SerialNumber).FirstOrDefault();
 
+
+                    if (SerialNumber == t)
+                    {
+                        return new ReturnDto(false, ReturnDto.SerialError);
+                    }
+
+                    else
+                    {
                         string kod;
                         int max_id = data.TB_Others.Max(p => p.ID);
                         kod = "Mt-" + max_id;
@@ -33,9 +42,13 @@ namespace Demirbaş.Classes
                         m.PurchaseDate = PurchaseDate;
                         m.InvoiceNumber = InvoiceNumber;
                         m.OldUser = OldUser;
+                        m.KayitDurum = "Active";
                         m.PurchaseDate = PurchaseDate;
                         data.TB_Others.Add(m);
                         data.SaveChanges();
+                    }
+
+                       
 
                     }
                     return new ReturnDto(true, ReturnDto.Success);
@@ -82,7 +95,23 @@ namespace Demirbaş.Classes
 
         }
 
-
+        public ReturnDto OthersDelete(string OthersCode)
+        {
+            try
+            {
+                using (EquipmentsEntities data = new EquipmentsEntities())
+                {
+                    var m = data.TB_Others.Where(p => p.UserCode == OthersCode).FirstOrDefault();
+                    m.KayitDurum = "Inactive";
+                    data.SaveChanges();
+                }
+                return new ReturnDto(true, ReturnDto.Success);
+            }
+            catch (Exception)
+            {
+                return new ReturnDto(false, ReturnDto.Failed);
+            }
+        }
 
 
 
@@ -94,5 +123,3 @@ namespace Demirbaş.Classes
 
 
 }
-
-  

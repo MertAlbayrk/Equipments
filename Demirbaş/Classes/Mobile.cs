@@ -14,27 +14,39 @@ namespace Demirbaş.Classes
             {
                 using (EquipmentsEntities data = new EquipmentsEntities())
                 {
-
-                    string kod;
-                    int max_id = data.TB_Mobile.Max(p => p.ID);
-                    kod = "M-" + max_id;
+                    var t = data.TB_Mobile.Where(p => p.SerialNumber == SerialNumber).Select(p => p.SerialNumber).FirstOrDefault();
 
 
+                    if (SerialNumber == t)
+                    {
+                        return new ReturnDto(false, ReturnDto.SerialError);
+                    }
 
-                    TB_Mobile m = new TB_Mobile();
-                    m.UserCode = kod;
-                    m.Demirbas = Demirbas;
-                    m.Name = Name;
-                    m.Phone = Phone;
-                    m.Number = Number;
-                    m.SerialNumber = SerialNumber;
-                    m.IMEI = IMEI;
-                    m.MAC = MAC;
-                    m.PurchaseDate = PurchaseDate;
-                    m.InvoiceNumber = InvInvoiceNumber;
-                    m.OldUser = Olduser;
-                    data.TB_Mobile.Add(m);
-                    data.SaveChanges();
+                    else
+                    {
+                        string kod;
+                        int max_id = data.TB_Mobile.Max(p => p.ID);
+                        kod = "M-" + max_id;
+
+
+
+                        TB_Mobile m = new TB_Mobile();
+                        m.UserCode = kod;
+                        m.Demirbas = Demirbas;
+                        m.Name = Name;
+                        m.Phone = Phone;
+                        m.Number = Number;
+                        m.SerialNumber = SerialNumber;
+                        m.IMEI = IMEI;
+                        m.MAC = MAC;
+                        m.PurchaseDate = PurchaseDate;
+                        m.InvoiceNumber = InvInvoiceNumber;
+                        m.OldUser = Olduser;
+                        m.KayitDurumu = "Active";
+                        data.TB_Mobile.Add(m);
+                        data.SaveChanges();
+                    }
+
 
                 }
                 return new ReturnDto(true, ReturnDto.Success);
@@ -46,13 +58,13 @@ namespace Demirbaş.Classes
             }
         }
 
-        public ReturnDto mobileUpdate(string mobileCode, string Demirbas, string Name, string Phone, string Number, string SerialNumber, string IMEI, string MAC, DateTime PurchaseDate, string InvInvoiceNumber, string Olduser)
+        public ReturnDto mobileUpdate(string MobileCode, string Demirbas, string Name, string Phone, string Number, string SerialNumber, string IMEI, string MAC, DateTime PurchaseDate, string InvInvoiceNumber, string Olduser)
         {
             try
             {
                 using (EquipmentsEntities data = new EquipmentsEntities())
                 {
-                    var m = data.TB_Mobile.Where(p => p.UserCode == mobileCode).FirstOrDefault();
+                    var m = data.TB_Mobile.Where(p => p.UserCode == MobileCode).FirstOrDefault();
                     m.Demirbas = Demirbas;
                     m.IMEI = IMEI;
                     m.InvoiceNumber = InvInvoiceNumber;
@@ -73,5 +85,32 @@ namespace Demirbaş.Classes
                 return new ReturnDto(false, ReturnDto.Failed);
             }
         }
+
+        public ReturnDto MobileDelete(string MobileCode)
+        {
+            try
+            {
+                using (EquipmentsEntities data = new EquipmentsEntities())
+                {
+                    var m = data.TB_Mobile.Where(p => p.UserCode == MobileCode).FirstOrDefault();
+                    m.KayitDurumu = "Inactive";
+                    data.SaveChanges();
+                }
+                return new ReturnDto(true, ReturnDto.Success);
+            }
+            catch (Exception)
+            {
+                return new ReturnDto(false, ReturnDto.Failed);
+            }
+        }
+
+
+
+
     }
+
+
+
+
+
 }

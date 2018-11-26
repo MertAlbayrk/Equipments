@@ -25,6 +25,7 @@ namespace Demirbaş.DataModel
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<TB_Mobile> TB_Mobile { get; set; }
         public DbSet<TB_Monitors> TB_Monitors { get; set; }
         public DbSet<TB_Notebooks> TB_Notebooks { get; set; }

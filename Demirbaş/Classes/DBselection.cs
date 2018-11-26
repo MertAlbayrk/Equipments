@@ -84,6 +84,7 @@ namespace Demirbaş.Classes
             public string PUK1 { get; set; }
             public string PUK2 { get; set; }
             public string Special { get; set; }
+            public string Status { get; set; }
             public DateTime PurchaseDate { get; set; }
             public string OldUser { get; set; }
 
